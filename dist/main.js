@@ -1295,7 +1295,7 @@ module.exports = shell;
 /******/ 	/* webpack/runtime/load script */
 /******/ 	(() => {
 /******/ 		var inProgress = {};
-/******/ 		var dataWebpackPrefix = "vue-spa:";
+/******/ 		var dataWebpackPrefix = "spa:";
 /******/ 		// loadScript function to load a script via script tag
 /******/ 		__webpack_require__.l = (url, done, key, chunkId) => {
 /******/ 			if(inProgress[url]) { inProgress[url].push(done); return; }
@@ -1427,7 +1427,7 @@ module.exports = shell;
 /******/ 			// runs all init snippets from all modules reachable
 /******/ 			var scope = __webpack_require__.S[name];
 /******/ 			var warn = (msg) => (typeof console !== "undefined" && console.warn && console.warn(msg));
-/******/ 			var uniqueName = "vue-spa";
+/******/ 			var uniqueName = "spa";
 /******/ 			var register = (name, version, factory, eager) => {
 /******/ 				var versions = scope[name] = scope[name] || {};
 /******/ 				var activeVersion = versions[version];
@@ -1544,7 +1544,7 @@ module.exports = shell;
 /******/ 		
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkvue_spa"] = self["webpackChunkvue_spa"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkspa"] = self["webpackChunkspa"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
@@ -1559,9 +1559,15 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var single_spa__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! single-spa */ "./node_modules/single-spa/lib/esm/single-spa.min.js");
 
-window.singleSpa = single_spa__WEBPACK_IMPORTED_MODULE_0__;
-single_spa__WEBPACK_IMPORTED_MODULE_0__.registerApplication('shell', () => __webpack_require__.e(/*! import() */ "webpack_container_remote_shell_AppModule").then(__webpack_require__.t.bind(__webpack_require__, /*! shell/AppModule */ "webpack/container/remote/shell/AppModule", 23)), location => location.pathname.startsWith('/'));
-single_spa__WEBPACK_IMPORTED_MODULE_0__.registerApplication('nav', () => System.import("parcels-components-nav"), location => location.pathname.startsWith('/'));
+single_spa__WEBPACK_IMPORTED_MODULE_0__.registerApplication('shell', () => __webpack_require__.e(/*! import() */ "webpack_container_remote_shell_AppModule").then(__webpack_require__.t.bind(__webpack_require__, /*! shell/AppModule */ "webpack/container/remote/shell/AppModule", 23)), location => location.pathname.startsWith('/')); // singleSpa.registerApplication(
+//   'nav',
+//   () =>
+//     System.import(
+//       "parcels-components-nav"
+//     ),
+//   location => location.pathname.startsWith('/')
+// );
+
 single_spa__WEBPACK_IMPORTED_MODULE_0__.start();
 })();
 

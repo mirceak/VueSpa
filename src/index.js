@@ -1,6 +1,4 @@
-import * as  singleSpa from 'single-spa';
-
-window.singleSpa = singleSpa
+import * as singleSpa from 'single-spa';
 
 singleSpa.registerApplication(
   'shell',
@@ -8,13 +6,13 @@ singleSpa.registerApplication(
   location => location.pathname.startsWith('/')
 );
 
-singleSpa.registerApplication(
-  'nav',
-  () =>
-    System.import(
-      "parcels-components-nav"
-    ),
-  location => location.pathname.startsWith('/')
-);
+// singleSpa.registerApplication(
+//   'nav',
+//   () =>
+//     System.import(
+//       "parcels-components-nav"
+//     ),
+//   location => location.pathname.startsWith('/')
+// );
 
 singleSpa.start();

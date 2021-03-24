@@ -42,6 +42,10 @@ module.exports = {
     ]
   },
 
+  externals:{
+    "System": "window System"
+  },
+
   plugins: [
     new ModuleFederationPlugin({
       name: 'home',
@@ -49,6 +53,9 @@ module.exports = {
       filename: 'remoteEntry.js',
       remotes: {
         shell: 'shell',
+      },
+      exposes: {
+        "./System": "System"
       }
     }),
     new HtmlWebpackPlugin({
