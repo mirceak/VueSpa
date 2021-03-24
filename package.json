@@ -1,0 +1,29 @@
+{
+  "name": "vue-spa",
+  "version": "1.0.0",
+  "description": "N/A",
+  "author": "Bereveanu Mircea",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.1.1",
+    "serve": "^11.3.0",
+    "single-spa": "^5.1.0",
+    "html-webpack-plugin": "^5.3.1",
+    "webpack": "^5.27.0",
+    "concurrently": "^5.3.0",
+    "webpack-cli": "^4.5.0"
+  },
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "webpack --mode production",
+    "serve": "serve dist -p 3001",
+    "dev": "concurrently \"yarn start\" \"yarn serve\" \"cd parcels/shell && yarn start\" \"cd parcels/shell && yarn serve\" \"cd parcels/components/nav & yarn serve\""
+  },
+  "devDependencies": {
+    "raw-loader": "^4.0.0"
+  }
+}
