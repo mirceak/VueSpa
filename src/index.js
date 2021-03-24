@@ -12,7 +12,7 @@ singleSpa.registerApplication(
   'nav',
   () =>
     System.import(
-      "nav"
+      "parcels-components-nav"
     ),
   location => location.pathname.startsWith('/')
 );
