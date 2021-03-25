@@ -1561,7 +1561,7 @@ __webpack_require__.r(__webpack_exports__);
 
 window.singleSpa = single_spa__WEBPACK_IMPORTED_MODULE_0__;
 single_spa__WEBPACK_IMPORTED_MODULE_0__.registerApplication('shell', () => __webpack_require__.e(/*! import() */ "webpack_container_remote_shell_AppModule").then(__webpack_require__.t.bind(__webpack_require__, /*! shell/AppModule */ "webpack/container/remote/shell/AppModule", 23)), location => location.pathname.startsWith('/'));
-single_spa__WEBPACK_IMPORTED_MODULE_0__.registerApplication('nav', () => System.import("nav"), location => location.pathname.startsWith('/'));
+single_spa__WEBPACK_IMPORTED_MODULE_0__.registerApplication('nav', () => System.import("parcels-components-nav"), location => location.pathname.startsWith('/'));
 single_spa__WEBPACK_IMPORTED_MODULE_0__.start();
 })();
 
