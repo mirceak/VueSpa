@@ -21,7 +21,7 @@
     "start": "webpack --watch",
     "build": "webpack --mode production",
     "serve": "serve dist -p 3001",
-    "dev": "concurrently \"yarn start\" \"yarn serve\" \"cd parcels/shell && yarn start\" \"cd parcels/shell && yarn serve\" \"cd parcels/components/nav & yarn serve\""
+    "dev": "concurrently \"yarn start\" \"yarn serve\" \"cd parcels/shell && yarn start\" \"cd parcels/shell && yarn v-serve\" \"cd parcels/components/nav & yarn serve\""
   },
   "devDependencies": {
     "raw-loader": "^4.0.0"

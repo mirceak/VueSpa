@@ -22,12 +22,20 @@
       integrity="sha512-cmSURwvMAS9N0/1/OP78yF5I4yVFW/iDH07xeSb2OTDeE3cfGWtQGxm4EwRrOKuMXP48kL546L3i+7jouj70xw=="
       crossorigin="anonymous"
     ></script>
-    <script src="http://localhost:3002/remoteEntry.js"></script>
+    
+    <script type="systemjs-importmap">
+      {
+        "imports": {
+          "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
+        }
+      }
+    </script>
 
     <script type="systemjs-importmap">
       {
         "imports": {
-          "parcels-components-nav": "//localhost:8080/js/app.js"
+          "parcels-components-nav": "//localhost:3003/js/app.js",
+          "parcels-shell": "//localhost:3002/js/app.js"
         }
       }
     </script>
